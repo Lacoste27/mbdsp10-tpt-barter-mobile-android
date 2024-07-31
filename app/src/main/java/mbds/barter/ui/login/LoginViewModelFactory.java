@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.annotation.NonNull;
 
-import mbds.barter.data.LoginDataSource;
+import mbds.barter.data.datasource.LoginDataSource;
 import mbds.barter.data.repository.LoginRepository;
 
 /**
