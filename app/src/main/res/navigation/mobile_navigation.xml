@@ -22,4 +22,35 @@
         android:name="mbds.barter.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_object_list"
+        android:name="mbds.barter.ui.objects.ListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_navigation_object_list_to_addObjectFragment2"
+            app:destination="@id/addObjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addObjectFragment"
+        android:name="mbds.barter.ui.objects.add.AddObjectFragment"
+        android:label="fragment_add_object"
+        tools:layout="@layout/fragment_add_object" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/postListFragment">
+        <fragment
+            android:id="@+id/postListFragment"
+            android:name="mbds.barter.ui.post.PostListFragment"
+            android:label="fragment_post_list"
+            tools:layout="@layout/fragment_post_list">
+            <action
+                android:id="@+id/action_postListFragment_to_addPost2"
+                app:destination="@id/addPost" />
+        </fragment>
+        <fragment
+            android:id="@+id/addPost"
+            android:name="mbds.barter.ui.post.add.AddPost"
+            android:label="fragment_add_post"
+            tools:layout="@layout/fragment_add_post" />
+    </navigation>
 </navigation>

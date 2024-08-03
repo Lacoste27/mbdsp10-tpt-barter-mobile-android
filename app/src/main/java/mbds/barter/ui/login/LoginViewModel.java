@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import android.util.Log;
 import android.util.Patterns;
 
 import mbds.barter.data.model.User;
@@ -11,12 +12,20 @@ import mbds.barter.data.repository.LoginRepository;
 import mbds.barter.data.Result;
 import mbds.barter.data.model.LoggedInUser;
 import mbds.barter.R;
+import mbds.barter.data.request.AuthRequest;
+import mbds.barter.data.response.AuthResponse;
+import mbds.barter.service.Api;
+import mbds.barter.service.IAuthService;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginViewModel extends ViewModel {
 
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
     private MutableLiveData<LoginResult> loginResult = new MutableLiveData<>();
     private LoginRepository loginRepository;
+    private IAuthService api;
 
     LoginViewModel(LoginRepository loginRepository) {
         this.loginRepository = loginRepository;
@@ -31,15 +40,22 @@ public class LoginViewModel extends ViewModel {
     }
 
     public void login(String username, String password) {
-        // can be launched in a separate asynchronous job
-        Result<User> result = loginRepository.login(username, password);
+        this.loginRepository.login(username, password, new Callback<AuthResponse>() {
+            @Override
+            public void onResponse(Call<AuthResponse> call, Response<AuthResponse> response) {
+                if(response.isSuccessful() && response.body() != null){
+                    User data = response.body().getUser();
+                    loginResult.setValue(new LoginResult(new LoggedInUserView(data.getName())));
+                }else {
+                    loginResult.setValue(new LoginResult(R.string.login_failed));
+                }
+            }
 
-        if (result instanceof Result.Success) {
-            User data = ((Result.Success<User>) result).getData();
-            loginResult.setValue(new LoginResult(new LoggedInUserView(data.name)));
-        } else {
-            loginResult.setValue(new LoginResult(R.string.login_failed));
-        }
+            @Override
+            public void onFailure(Call<AuthResponse> call, Throwable throwable) {
+                loginResult.setValue(new LoginResult(R.string.login_failed));
+            }
+        } );
     }
 
     public void loginDataChanged(String username, String password) {

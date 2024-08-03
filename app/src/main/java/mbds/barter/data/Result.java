@@ -45,4 +45,9 @@ public class Result<T> {
             return this.error;
         }
     }
+
+    public interface CallBack<T> {
+        void onSuccess(T result);
+        void onFailure(Exception e);
+    }
 }
