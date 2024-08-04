@@ -25,32 +25,34 @@
     <fragment
         android:id="@+id/navigation_object_list"
         android:name="mbds.barter.ui.objects.ListFragment"
-        android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" >
-        <action
-            android:id="@+id/action_navigation_object_list_to_addObjectFragment2"
-            app:destination="@id/addObjectFragment" />
-    </fragment>
+        android:label="My Objects"
+        tools:layout="@layout/fragment_item_list" />
     <fragment
         android:id="@+id/addObjectFragment"
         android:name="mbds.barter.ui.objects.add.AddObjectFragment"
-        android:label="fragment_add_object"
+        android:label="Add Object"
         tools:layout="@layout/fragment_add_object" />
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/postListFragment">
-        <fragment
-            android:id="@+id/postListFragment"
-            android:name="mbds.barter.ui.post.PostListFragment"
-            android:label="fragment_post_list"
-            tools:layout="@layout/fragment_post_list">
-            <action
-                android:id="@+id/action_postListFragment_to_addPost2"
-                app:destination="@id/addPost" />
-        </fragment>
-        <fragment
-            android:id="@+id/addPost"
-            android:name="mbds.barter.ui.post.add.AddPost"
-            android:label="fragment_add_post"
-            tools:layout="@layout/fragment_add_post" />
-    </navigation>
+
+    <fragment
+        android:id="@+id/addPost"
+        android:name="mbds.barter.ui.post.add.AddPost"
+        android:label="Add Post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_addPost_to_listPostFragment2"
+            app:popUpTo="@id/listPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPostFragment"
+        android:name="mbds.barter.ui.post.ListPostFragment"
+        android:label="My Posts"
+        tools:layout="@layout/fragment_list_post" >
+        <action
+            android:id="@+id/action_listPostFragment_to_addPost"
+            app:destination="@id/addPost"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/listPostFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
