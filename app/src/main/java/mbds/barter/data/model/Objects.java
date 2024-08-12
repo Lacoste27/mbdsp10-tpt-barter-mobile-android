@@ -1,13 +1,52 @@
 package mbds.barter.data.model;
 
+import java.util.Date;
 import java.util.List;
 
 public class Objects {
+    private int id;
     private String name;
     private int categoryId;
     private String description;
     private List<String> image;
     private int ownerId;
+
+    private Date deletedAt;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getDeletedAt() {
+        return deletedAt;
+    }
+
+    public void setDeletedAt(Date deletedAt) {
+        this.deletedAt = deletedAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    private Date updatedAt;
+    private Date createdAt;
 
     public String getName() {
         return name;

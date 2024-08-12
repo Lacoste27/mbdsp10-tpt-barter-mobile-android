@@ -7,7 +7,7 @@ public class ObjectRequest {
     private int categoryId;
     private String description;
     private List<String> image;
-    private int OwnerId;
+    private int ownerId;
 
     public ObjectRequest() {
 
@@ -17,7 +17,7 @@ public class ObjectRequest {
         this.categoryId = categoryId;
         this.description = description;
         this.image = image;
-        OwnerId = ownerId;
+        this.ownerId = ownerId;
     }
 
     public String getName() {
@@ -53,10 +53,10 @@ public class ObjectRequest {
     }
 
     public int getOwnerId() {
-        return OwnerId;
+        return ownerId;
     }
 
     public void setOwnerId(int ownerId) {
-        OwnerId = ownerId;
+        ownerId = ownerId;
     }
 }
