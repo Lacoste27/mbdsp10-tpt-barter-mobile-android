@@ -13,6 +13,7 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
@@ -24,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Objects;
+import java.util.logging.Logger;
 
 import mbds.barter.MainActivity;
 import mbds.barter.R;
@@ -49,9 +51,17 @@ public class LoginActivity extends AppCompatActivity {
                 .get(LoginViewModel.class);
 
         final EditText usernameEditText = binding.username;
+        usernameEditText.setText("user@example.com");
         final EditText passwordEditText = binding.password;
+        passwordEditText.setText("jkl;");
+
+
         final Button loginButton = binding.login;
         final ProgressBar loadingProgressBar = binding.loading;
+
+        // Initially disable the button
+        loginButton.setEnabled(false);
+
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override

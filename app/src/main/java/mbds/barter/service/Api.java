@@ -29,7 +29,7 @@ public class Api {
                             .create();
 
                     retrofit = new Retrofit.Builder()
-                            .baseUrl("http://192.168.1.149:3000")
+                            .baseUrl("http://192.168.1.18:3000")
                             .addConverterFactory(GsonConverterFactory.create(gson))
                             .client(client)
                             .build();
