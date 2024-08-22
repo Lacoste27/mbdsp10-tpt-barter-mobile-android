@@ -2,6 +2,7 @@ package mbds.barter.ui.post;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import mbds.barter.R;
 import mbds.barter.databinding.FragmentListPostBinding;
+import mbds.barter.ui.post.qrCodePostResult.QrCodePostResultFragment;
 
 import com.journeyapps.barcodescanner.ScanOptions;
 import com.journeyapps.barcodescanner.ScanContract;
@@ -43,8 +45,18 @@ public class ListPostFragment extends Fragment {
 
         // Initialize the QR code scanner launcher
         barcodeLauncher = registerForActivityResult(new ScanContract(), result -> {
-            if (result.getContents() != null) {
+            String qrCodeString = result.getContents();
+            if (qrCodeString!= null && qrCodeString.matches("^(http|https)://\\d{1,3}(\\.\\d{1,3}){3}:\\d+/api/post/\\d+$")) {
                 Toast.makeText(getActivity(), "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+
+                // Navigate to the QR Code Result Fragment using NavController
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+                // Pass the scanned result to the new fragment using a Bundle
+                Bundle args = new Bundle();
+                args.putString("scanned_result", result.getContents());
+
+                navController.navigate(R.id.action_listPostFragment_to_qrCodePostResultFragment, args);
             } else {
                 Toast.makeText(getActivity(), "Scan Cancelled", Toast.LENGTH_LONG).show();
             }
@@ -62,6 +74,7 @@ public class ListPostFragment extends Fragment {
 
         return root;
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText usernameEditText = binding.username;
         usernameEditText.setText("user@example.com");
         final EditText passwordEditText = binding.password;
-        passwordEditText.setText("jkl;");
+        passwordEditText.setText("jkl");
 
 
         final Button loginButton = binding.login;
