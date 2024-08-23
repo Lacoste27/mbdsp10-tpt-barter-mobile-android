@@ -57,6 +57,6 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:3.4.1")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.google.zxing:core:3.3.0")
-    
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
 }
