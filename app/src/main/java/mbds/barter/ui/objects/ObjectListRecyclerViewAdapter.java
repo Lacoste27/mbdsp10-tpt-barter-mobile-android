@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import mbds.barter.data.model.Objects;
 import mbds.barter.ui.objects.placeholder.PlaceholderContent.PlaceholderItem;
 import mbds.barter.databinding.FragmentItemBinding;
 
@@ -18,24 +19,23 @@ import java.util.List;
  */
 public class ObjectListRecyclerViewAdapter extends RecyclerView.Adapter<ObjectListRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+    private final List<Objects> mValues;
 
-    public ObjectListRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public ObjectListRecyclerViewAdapter(List<Objects> items) {
         mValues = items;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         return new ViewHolder(FragmentItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
-
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        Objects object = mValues.get(position);
+        holder.mNameView.setText(object.getName());
+        holder.mDescriptionView.setText(object.getDescription());
+        // Optionally handle image display using a library like Glide or Picasso if `image` is URLs.
     }
 
     @Override
@@ -44,19 +44,14 @@ public class ObjectListRecyclerViewAdapter extends RecyclerView.Adapter<ObjectLi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public final TextView mNameView;
+        public final TextView mDescriptionView;
+        // Add an ImageView for the images if necessary
 
         public ViewHolder(FragmentItemBinding binding) {
             super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            mNameView = binding.name; // Adjust these IDs based on your actual layout
+            mDescriptionView = binding.description;
         }
     }
 }

@@ -45,6 +45,7 @@ public class LoginViewModel extends ViewModel {
             public void onResponse(Call<AuthResponse> call, Response<AuthResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     User data = response.body().getUser();
+                    Api.setAuthToken(response.body().getToken());
                     loginResult.setValue(new LoginResult(new LoggedInUserView(data.getName())));
                 } else {
                     loginResult.setValue(new LoginResult(R.string.login_failed));

@@ -1,5 +1,6 @@
 package mbds.barter.data.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -9,10 +10,25 @@ public class Objects {
     private int categoryId;
     private String description;
     private List<String> image;
-    private int ownerId;
-
+    private Date createdAt;
+    private Date updatedAt;
     private Date deletedAt;
 
+    public Objects() {
+    }
+
+    public Objects(int id, String name, int categoryId, String description, List<String> image, Date createdAt, Date updatedAt, Date deletedAt) {
+        this.id = id;
+        this.name = name;
+        this.categoryId = categoryId;
+        this.description = description;
+        this.image = image;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.deletedAt = deletedAt;
+    }
+
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -20,33 +36,6 @@ public class Objects {
     public void setId(int id) {
         this.id = id;
     }
-
-    public Date getDeletedAt() {
-        return deletedAt;
-    }
-
-    public void setDeletedAt(Date deletedAt) {
-        this.deletedAt = deletedAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    private Date updatedAt;
-    private Date createdAt;
 
     public String getName() {
         return name;
@@ -80,21 +69,27 @@ public class Objects {
         this.image = image;
     }
 
-    public int getOwnerId() {
-        return ownerId;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setOwnerId(int ownerId) {
-        this.ownerId = ownerId;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Objects(String name, int categoryId, String description, List<String> image, int ownerId) {
-        this.name = name;
-        this.categoryId = categoryId;
-        this.description = description;
-        this.image = image;
-        this.ownerId = ownerId;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
+    public Date getDeletedAt() {
+        return deletedAt;
+    }
+
+    public void setDeletedAt(Date deletedAt) {
+        this.deletedAt = deletedAt;
+    }
 }

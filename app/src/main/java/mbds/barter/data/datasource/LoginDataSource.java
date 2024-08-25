@@ -29,7 +29,6 @@ public class LoginDataSource {
         request.password = password;
 
         Call<AuthResponse> call = api.login(request);
-
         call.enqueue(callback);
     }
 
