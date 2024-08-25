@@ -54,5 +54,17 @@
             app:launchSingleTop="false"
             app:popUpTo="@id/listPostFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listPostFragment_to_qrCodePostResultFragment"
+            app:destination="@id/qrCodePostResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrCodePostResultFragment"
+        android:name="mbds.barter.ui.post.qrCodePostResult.QrCodePostResultFragment"
+        android:label="fragment_qr_code_post_result"
+        tools:layout="@layout/fragment_qr_code_post_result" >
+        <action
+            android:id="@+id/action_qrCodePostResultFragment_to_listPostFragment"
+            app:destination="@id/listPostFragment" />
     </fragment>
 </navigation>
