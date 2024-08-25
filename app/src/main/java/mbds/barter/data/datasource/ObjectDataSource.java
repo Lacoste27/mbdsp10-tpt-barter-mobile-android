@@ -1,21 +1,36 @@
 package mbds.barter.data.datasource;
 
-import mbds.barter.data.model.Objects;
-import mbds.barter.data.request.ObjectRequest;
-import mbds.barter.data.response.AuthResponse;
+import java.io.IOException;
+import mbds.barter.data.response.ObjectsResponse;
 import mbds.barter.service.Api;
 import mbds.barter.service.IObjectService;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ObjectDataSource {
     private IObjectService api;
 
-    public void  addObject(ObjectRequest request, Callback<Objects> callback) {
+    public ObjectDataSource() {
         api = Api.getClient().create(IObjectService.class);
+    }
 
-        Call<Objects> call = api.addObject(request);
+    public void getAllObjects(Callback<ObjectsResponse> callback) {
+        Call<ObjectsResponse> call = api.getAllObjects();
+        call.enqueue(new Callback<ObjectsResponse>() {
+            @Override
+            public void onResponse(Call<ObjectsResponse> call, Response<ObjectsResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    callback.onResponse(call, response);
+                } else {
+                    callback.onFailure(call, new IOException("Error fetching data"));
+                }
+            }
 
-        call.enqueue(callback);
+            @Override
+            public void onFailure(Call<ObjectsResponse> call, Throwable t) {
+                callback.onFailure(call, t);
+            }
+        });
     }
 }
