@@ -9,6 +9,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "objects.db";
     private static final int DATABASE_VERSION = 1;
 
+    private static final String TABLE_POSTS_CREATE =
+            "CREATE TABLE posts (" +
+                    "id INTEGER PRIMARY KEY," +
+                    "authorId INTEGER, " +
+                    "description TEXT," +
+                    "createdAt TEXT," +
+                    "updatedAt TEXT," +
+                    "deletedAt TEXT," +
+                    "objects TEXT," + // JSON string for List<QRCPost.ObjectPost>\n" +
+                    "suggestions TEXT," + // JSON string for List<QRCPost.Suggestion>\n" +
+                    "author TEXT);";
+
     // Full SQL query for creating the objects table
     private static final String TABLE_CREATE =
             "CREATE TABLE objects (" +
@@ -28,11 +40,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_CREATE);
+        db.execSQL(TABLE_POSTS_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS objects");
+        db.execSQL("DROP TABLE IF EXISTS  posts");
         onCreate(db);
     }
 }
