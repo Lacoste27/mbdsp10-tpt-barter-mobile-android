@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -50,6 +51,7 @@ public class ListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_item_list, container, false);
         Context context = view.getContext();
         recyclerView = view.findViewById(R.id.list);
+
         recyclerView.setLayoutManager(mColumnCount <= 1 ?
                 new LinearLayoutManager(context) :
                 new GridLayoutManager(context, mColumnCount));

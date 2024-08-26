@@ -2,32 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    android:elevation="4dp">
 
-    <!-- TextView for the Object Name -->
+    <!-- TextView for the Object ID -->
     <TextView
         android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_margin"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold" />
-
-    <!-- TextView for the Object Description -->
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_margin"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <!-- Placeholder for ImageView if needed -->
-    <!-- Uncomment if images are to be displayed
-    <ImageView
-        android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/image_margin"
-        android:src="@drawable/ic_placeholder" /> -->
+        android:textStyle="bold" />
+
+    <!-- TextView for the Object Content -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+
+    <!-- Optional: Add a Separator Line -->
 
 </LinearLayout>

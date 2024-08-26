@@ -1,0 +1,477 @@
+.
+├── app
+│   ├── build
+│   │   ├── generated
+│   │   │   ├── ap_generated_sources
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── data_binding_base_class_source_out
+│   │   │   │   ├── debug
+│   │   │   │   │   └── out
+│   │   │   │   │       └── mbds
+│   │   │   │   │           └── barter
+│   │   │   │   │               └── databinding
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── out
+│   │   │   └── res
+│   │   │       ├── pngs
+│   │   │       │   └── debug
+│   │   │       └── resValues
+│   │   │           ├── androidTest
+│   │   │           │   └── debug
+│   │   │           └── debug
+│   │   ├── intermediates
+│   │   │   ├── aar_metadata_check
+│   │   │   │   ├── debug
+│   │   │   │   │   └── checkDebugAarMetadata
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── checkDebugAndroidTestAarMetadata
+│   │   │   ├── annotation_processor_list
+│   │   │   │   ├── debug
+│   │   │   │   │   └── javaPreCompileDebug
+│   │   │   │   ├── debugAndroidTest
+│   │   │   │   │   └── javaPreCompileDebugAndroidTest
+│   │   │   │   └── debugUnitTest
+│   │   │   │       └── javaPreCompileDebugUnitTest
+│   │   │   ├── apk
+│   │   │   │   └── debug
+│   │   │   ├── apk_ide_redirect_file
+│   │   │   │   └── debug
+│   │   │   │       └── createDebugApkListingFileRedirect
+│   │   │   ├── app_metadata
+│   │   │   │   └── debug
+│   │   │   │       └── writeDebugAppMetadata
+│   │   │   ├── assets
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugAssets
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestAssets
+│   │   │   ├── compatible_screen_manifest
+│   │   │   │   └── debug
+│   │   │   │       └── createDebugCompatibleScreenManifests
+│   │   │   ├── compile_and_runtime_not_namespaced_r_class_jar
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugResources
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestResources
+│   │   │   ├── compressed_assets
+│   │   │   │   ├── debug
+│   │   │   │   │   └── compressDebugAssets
+│   │   │   │   │       └── out
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── compressDebugAndroidTestAssets
+│   │   │   │           └── out
+│   │   │   ├── data_binding_base_class_log_artifact
+│   │   │   │   ├── debug
+│   │   │   │   │   └── dataBindingGenBaseClassesDebug
+│   │   │   │   │       └── out
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── dataBindingGenBaseClassesDebugAndroidTest
+│   │   │   │           └── out
+│   │   │   ├── data_binding_dependency_artifacts
+│   │   │   │   ├── debug
+│   │   │   │   │   └── dataBindingMergeDependencyArtifactsDebug
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── dataBindingMergeDependencyArtifactsDebugAndroidTest
+│   │   │   ├── data_binding_layout_info_type_merge
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugResources
+│   │   │   │   │       └── out
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestResources
+│   │   │   │           └── out
+│   │   │   ├── data_binding_layout_info_type_package
+│   │   │   │   └── debug
+│   │   │   │       └── packageDebugResources
+│   │   │   │           └── out
+│   │   │   ├── desugar_graph
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   │           └── out
+│   │   │   │               ├── currentProject
+│   │   │   │               │   ├── dirs_bucket_0
+│   │   │   │               │   ├── dirs_bucket_1
+│   │   │   │               │   ├── dirs_bucket_2
+│   │   │   │               │   ├── dirs_bucket_3
+│   │   │   │               │   ├── dirs_bucket_4
+│   │   │   │               │   ├── dirs_bucket_5
+│   │   │   │               │   ├── jar_4c09e773ea5fc7add37c61a37fe387b36623be7f7f8a08ec9225a6be6dba9800_bucket_0
+│   │   │   │               │   ├── jar_4c09e773ea5fc7add37c61a37fe387b36623be7f7f8a08ec9225a6be6dba9800_bucket_1
+│   │   │   │               │   ├── jar_4c09e773ea5fc7add37c61a37fe387b36623be7f7f8a08ec9225a6be6dba9800_bucket_2
+│   │   │   │               │   ├── jar_4c09e773ea5fc7add37c61a37fe387b36623be7f7f8a08ec9225a6be6dba9800_bucket_3
+│   │   │   │               │   ├── jar_4c09e773ea5fc7add37c61a37fe387b36623be7f7f8a08ec9225a6be6dba9800_bucket_4
+│   │   │   │               │   └── jar_4c09e773ea5fc7add37c61a37fe387b36623be7f7f8a08ec9225a6be6dba9800_bucket_5
+│   │   │   │               ├── externalLibs
+│   │   │   │               ├── mixedScopes
+│   │   │   │               └── otherProjects
+│   │   │   ├── dex
+│   │   │   │   ├── debug
+│   │   │   │   │   ├── mergeExtDexDebug
+│   │   │   │   │   ├── mergeLibDexDebug
+│   │   │   │   │   │   ├── 0
+│   │   │   │   │   │   ├── 1
+│   │   │   │   │   │   ├── 10
+│   │   │   │   │   │   ├── 11
+│   │   │   │   │   │   ├── 12
+│   │   │   │   │   │   ├── 13
+│   │   │   │   │   │   ├── 14
+│   │   │   │   │   │   ├── 15
+│   │   │   │   │   │   ├── 2
+│   │   │   │   │   │   ├── 3
+│   │   │   │   │   │   ├── 4
+│   │   │   │   │   │   ├── 5
+│   │   │   │   │   │   ├── 6
+│   │   │   │   │   │   ├── 7
+│   │   │   │   │   │   ├── 8
+│   │   │   │   │   │   └── 9
+│   │   │   │   │   └── mergeProjectDexDebug
+│   │   │   │   │       ├── 0
+│   │   │   │   │       ├── 1
+│   │   │   │   │       ├── 10
+│   │   │   │   │       ├── 11
+│   │   │   │   │       ├── 12
+│   │   │   │   │       ├── 13
+│   │   │   │   │       ├── 14
+│   │   │   │   │       ├── 15
+│   │   │   │   │       ├── 2
+│   │   │   │   │       ├── 3
+│   │   │   │   │       ├── 4
+│   │   │   │   │       ├── 5
+│   │   │   │   │       ├── 6
+│   │   │   │   │       ├── 7
+│   │   │   │   │       ├── 8
+│   │   │   │   │       └── 9
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       ├── mergeExtDexDebugAndroidTest
+│   │   │   │       └── mergeLibDexDebugAndroidTest
+│   │   │   │           ├── 0
+│   │   │   │           ├── 1
+│   │   │   │           ├── 10
+│   │   │   │           ├── 11
+│   │   │   │           ├── 12
+│   │   │   │           ├── 13
+│   │   │   │           ├── 14
+│   │   │   │           ├── 15
+│   │   │   │           ├── 2
+│   │   │   │           ├── 3
+│   │   │   │           ├── 4
+│   │   │   │           ├── 5
+│   │   │   │           ├── 6
+│   │   │   │           ├── 7
+│   │   │   │           ├── 8
+│   │   │   │           └── 9
+│   │   │   ├── dex_archive_input_jar_hashes
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   ├── dex_number_of_buckets_file
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   ├── duplicate_classes_check
+│   │   │   │   ├── debug
+│   │   │   │   │   └── checkDebugDuplicateClasses
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── checkDebugAndroidTestDuplicateClasses
+│   │   │   ├── external_file_lib_dex_archives
+│   │   │   │   ├── debug
+│   │   │   │   │   └── desugarDebugFileDependencies
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── desugarDebugAndroidTestFileDependencies
+│   │   │   ├── external_libs_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   │           └── out
+│   │   │   ├── external_libs_dex_archive_with_artifact_transforms
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   │           └── out
+│   │   │   ├── incremental
+│   │   │   │   ├── dataBindingGenBaseClassesDebug
+│   │   │   │   ├── dataBindingGenBaseClassesDebugAndroidTest
+│   │   │   │   ├── debug
+│   │   │   │   │   ├── mergeDebugResources
+│   │   │   │   │   │   ├── merged.dir
+│   │   │   │   │   │   └── stripped.dir
+│   │   │   │   │   │       └── layout
+│   │   │   │   │   └── packageDebugResources
+│   │   │   │   │       ├── merged.dir
+│   │   │   │   │       └── stripped.dir
+│   │   │   │   │           └── layout
+│   │   │   │   ├── debugAndroidTest
+│   │   │   │   │   └── mergeDebugAndroidTestResources
+│   │   │   │   │       ├── merged.dir
+│   │   │   │   │       │   ├── values
+│   │   │   │   │       │   ├── values-v18
+│   │   │   │   │       │   ├── values-v21
+│   │   │   │   │       │   └── values-v28
+│   │   │   │   │       └── stripped.dir
+│   │   │   │   ├── debugAndroidTest-mergeJavaRes
+│   │   │   │   │   └── zip-cache
+│   │   │   │   ├── debug-mergeJavaRes
+│   │   │   │   │   └── zip-cache
+│   │   │   │   ├── mergeDebugAndroidTestAssets
+│   │   │   │   ├── mergeDebugAndroidTestJniLibFolders
+│   │   │   │   ├── mergeDebugAndroidTestShaders
+│   │   │   │   ├── mergeDebugAssets
+│   │   │   │   ├── mergeDebugJniLibFolders
+│   │   │   │   ├── mergeDebugShaders
+│   │   │   │   └── packageDebug
+│   │   │   │       └── tmp
+│   │   │   │           └── debug
+│   │   │   │               └── zip-cache
+│   │   │   ├── javac
+│   │   │   │   └── debug
+│   │   │   │       └── compileDebugJavaWithJavac
+│   │   │   │           └── classes
+│   │   │   │               └── mbds
+│   │   │   │                   └── barter
+│   │   │   │                       ├── data
+│   │   │   │                       │   ├── datasource
+│   │   │   │                       │   ├── local
+│   │   │   │                       │   ├── model
+│   │   │   │                       │   ├── repository
+│   │   │   │                       │   ├── request
+│   │   │   │                       │   └── response
+│   │   │   │                       ├── databinding
+│   │   │   │                       ├── helpers
+│   │   │   │                       ├── service
+│   │   │   │                       ├── ui
+│   │   │   │                       │   ├── dashboard
+│   │   │   │                       │   ├── home
+│   │   │   │                       │   ├── login
+│   │   │   │                       │   ├── notifications
+│   │   │   │                       │   ├── objects
+│   │   │   │                       │   │   ├── add
+│   │   │   │                       │   │   └── placeholder
+│   │   │   │                       │   ├── post
+│   │   │   │                       │   │   ├── add
+│   │   │   │                       │   │   └── qrCodePostResult
+│   │   │   │                       │   └── t_objects
+│   │   │   │                       │       └── placeholder
+│   │   │   │                       └── utils
+│   │   │   ├── local_only_symbol_list
+│   │   │   │   └── debug
+│   │   │   │       └── parseDebugLocalResources
+│   │   │   ├── manifest_merge_blame_file
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugMainManifest
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestManifest
+│   │   │   ├── merged_java_res
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugJavaResource
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestJavaResource
+│   │   │   ├── merged_jni_libs
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugJniLibFolders
+│   │   │   │   │       └── out
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestJniLibFolders
+│   │   │   │           └── out
+│   │   │   ├── merged_manifest
+│   │   │   │   └── debug
+│   │   │   │       └── processDebugMainManifest
+│   │   │   ├── merged_manifests
+│   │   │   │   └── debug
+│   │   │   │       └── processDebugManifest
+│   │   │   ├── merged_res
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugResources
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestResources
+│   │   │   ├── merged_res_blame_folder
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugResources
+│   │   │   │   │       └── out
+│   │   │   │   │           ├── multi-v2
+│   │   │   │   │           └── single
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestResources
+│   │   │   │           └── out
+│   │   │   │               └── multi-v2
+│   │   │   ├── merged_shaders
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mergeDebugShaders
+│   │   │   │   │       └── out
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mergeDebugAndroidTestShaders
+│   │   │   │           └── out
+│   │   │   ├── mixed_scope_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   │           └── out
+│   │   │   ├── navigation_json
+│   │   │   │   └── debug
+│   │   │   │       └── extractDeepLinksDebug
+│   │   │   ├── nested_resources_validation_report
+│   │   │   │   ├── debug
+│   │   │   │   │   └── generateDebugResources
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── generateDebugAndroidTestResources
+│   │   │   ├── packaged_manifests
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugManifestForPackage
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestManifest
+│   │   │   ├── packaged_res
+│   │   │   │   └── debug
+│   │   │   │       └── packageDebugResources
+│   │   │   │           ├── drawable
+│   │   │   │           ├── layout
+│   │   │   │           ├── layout-w1240dp-v13
+│   │   │   │           ├── layout-w936dp-v13
+│   │   │   │           ├── menu
+│   │   │   │           ├── mipmap-anydpi-v26
+│   │   │   │           ├── mipmap-hdpi-v4
+│   │   │   │           ├── mipmap-mdpi-v4
+│   │   │   │           ├── mipmap-xhdpi-v4
+│   │   │   │           ├── mipmap-xxhdpi-v4
+│   │   │   │           ├── mipmap-xxxhdpi-v4
+│   │   │   │           ├── navigation
+│   │   │   │           ├── values
+│   │   │   │           ├── values-land
+│   │   │   │           ├── values-night-v8
+│   │   │   │           ├── values-w1240dp-v13
+│   │   │   │           ├── values-w600dp-v13
+│   │   │   │           └── xml
+│   │   │   ├── processed_res
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugResources
+│   │   │   │   │       └── out
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestResources
+│   │   │   │           └── out
+│   │   │   ├── project_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   │           └── out
+│   │   │   │               └── mbds
+│   │   │   │                   └── barter
+│   │   │   │                       ├── data
+│   │   │   │                       │   ├── datasource
+│   │   │   │                       │   ├── local
+│   │   │   │                       │   ├── model
+│   │   │   │                       │   ├── repository
+│   │   │   │                       │   ├── request
+│   │   │   │                       │   └── response
+│   │   │   │                       ├── databinding
+│   │   │   │                       ├── helpers
+│   │   │   │                       ├── service
+│   │   │   │                       ├── ui
+│   │   │   │                       │   ├── dashboard
+│   │   │   │                       │   ├── home
+│   │   │   │                       │   ├── login
+│   │   │   │                       │   ├── notifications
+│   │   │   │                       │   ├── objects
+│   │   │   │                       │   │   ├── add
+│   │   │   │                       │   │   └── placeholder
+│   │   │   │                       │   ├── post
+│   │   │   │                       │   │   ├── add
+│   │   │   │                       │   │   └── qrCodePostResult
+│   │   │   │                       │   └── t_objects
+│   │   │   │                       │       └── placeholder
+│   │   │   │                       └── utils
+│   │   │   ├── runtime_symbol_list
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugResources
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestResources
+│   │   │   ├── signing_config_versions
+│   │   │   │   ├── debug
+│   │   │   │   │   └── writeDebugSigningConfigVersions
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── writeDebugAndroidTestSigningConfigVersions
+│   │   │   ├── source_set_path_map
+│   │   │   │   ├── debug
+│   │   │   │   │   └── mapDebugSourceSetPaths
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── mapDebugAndroidTestSourceSetPaths
+│   │   │   ├── stable_resource_ids_file
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugResources
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestResources
+│   │   │   ├── sub_project_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── dexBuilderDebug
+│   │   │   │           └── out
+│   │   │   ├── symbol_list_with_package_name
+│   │   │   │   ├── debug
+│   │   │   │   │   └── processDebugResources
+│   │   │   │   └── debugAndroidTest
+│   │   │   │       └── processDebugAndroidTestResources
+│   │   │   ├── tmp
+│   │   │   │   └── manifest
+│   │   │   │       └── androidTest
+│   │   │   │           └── debug
+│   │   │   └── validate_signing_config
+│   │   │       ├── debug
+│   │   │       │   └── validateSigningDebug
+│   │   │       └── debugAndroidTest
+│   │   │           └── validateSigningDebugAndroidTest
+│   │   ├── outputs
+│   │   │   └── logs
+│   │   └── tmp
+│   │       └── compileDebugJavaWithJavac
+│   │           └── compileTransaction
+│   │               ├── backup-dir
+│   │               └── stash-dir
+│   └── src
+│       ├── androidTest
+│       │   └── java
+│       │       └── mbds
+│       │           └── barter
+│       ├── main
+│       │   ├── java
+│       │   │   └── mbds
+│       │   │       └── barter
+│       │   │           ├── data
+│       │   │           │   ├── datasource
+│       │   │           │   ├── local
+│       │   │           │   ├── model
+│       │   │           │   ├── repository
+│       │   │           │   ├── request
+│       │   │           │   └── response
+│       │   │           ├── helpers
+│       │   │           ├── service
+│       │   │           ├── ui
+│       │   │           │   ├── dashboard
+│       │   │           │   ├── home
+│       │   │           │   ├── login
+│       │   │           │   ├── notifications
+│       │   │           │   ├── objects
+│       │   │           │   │   ├── add
+│       │   │           │   │   └── placeholder
+│       │   │           │   ├── post
+│       │   │           │   │   ├── add
+│       │   │           │   │   └── qrCodePostResult
+│       │   │           │   └── t_objects
+│       │   │           │       └── placeholder
+│       │   │           └── utils
+│       │   └── res
+│       │       ├── drawable
+│       │       ├── layout
+│       │       ├── layout-w1240dp
+│       │       ├── layout-w936dp
+│       │       ├── menu
+│       │       ├── mipmap-anydpi-v26
+│       │       ├── mipmap-hdpi
+│       │       ├── mipmap-mdpi
+│       │       ├── mipmap-xhdpi
+│       │       ├── mipmap-xxhdpi
+│       │       ├── mipmap-xxxhdpi
+│       │       ├── navigation
+│       │       ├── values
+│       │       ├── values-land
+│       │       ├── values-night
+│       │       ├── values-w1240dp
+│       │       ├── values-w600dp
+│       │       └── xml
+│       └── test
+│           └── java
+│               └── mbds
+│                   └── barter
+└── gradle
+    └── wrapper
+
+475 directories

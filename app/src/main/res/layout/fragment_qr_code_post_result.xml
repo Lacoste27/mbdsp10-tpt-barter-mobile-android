@@ -5,6 +5,16 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Heading for Description -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/tvPostDescription"
         android:layout_width="wrap_content"
@@ -28,6 +38,18 @@
         android:textSize="16sp" />
 
     <!-- Add more views for other details like updatedAt, deletedAt, etc. -->
+
+    <!-- Heading for Objects -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Objects"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25px"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvObjects"

@@ -81,10 +81,10 @@ public class ListPostFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Navigation for the add post button
-        binding.addPostButton.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_activity_main);
-            navController.navigate(R.id.action_listPostFragment_to_addPost);
-        });
+//        binding.addPostButton.setOnClickListener(v -> {
+//            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_activity_main);
+//            navController.navigate(R.id.action_listPostFragment_to_addPost);
+//        });
     }
 
     @Override
